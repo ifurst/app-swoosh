@@ -61,6 +61,9 @@
                                 <state key="normal" title="GET STARTED">
                                     <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 </state>
+                                <connections>
+                                    <segue destination="7mg-iw-8gf" kind="show" id="g2H-zZ-pr5"/>
+                                </connections>
                             </button>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="ON GOING ALL OUT" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="AOm-WI-9Jh">
                                 <rect key="frame" x="37.5" y="215" width="300" height="40"/>
@@ -172,9 +175,17 @@
                                     <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 </state>
                             </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="VNb-cy-JED">
+                                <rect key="frame" x="20" y="10" width="29" height="24"/>
+                                <state key="normal" image="backButton"/>
+                                <connections>
+                                    <segue destination="vrz-CP-3lC" kind="unwind" unwindAction="unwindFromSkillViewControllerWithUnwindSegue:" id="myp-4D-zZx"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <constraints>
+                            <constraint firstItem="VNb-cy-JED" firstAttribute="top" secondItem="h3f-or-KA8" secondAttribute="top" constant="10" id="7jg-rm-teO"/>
                             <constraint firstItem="LIJ-wG-mSw" firstAttribute="trailing" secondItem="Nnp-cF-a6j" secondAttribute="trailing" id="8AE-GW-WjC"/>
                             <constraint firstItem="LIJ-wG-mSw" firstAttribute="trailing" secondItem="cU4-Lf-z9x" secondAttribute="trailing" constant="20" id="MQG-Gp-iid"/>
                             <constraint firstItem="Nnp-cF-a6j" firstAttribute="top" secondItem="h3f-or-KA8" secondAttribute="top" constant="30" id="Ssp-u8-uo4"/>
@@ -185,6 +196,7 @@
                             <constraint firstAttribute="bottom" secondItem="3z8-7L-Roc" secondAttribute="bottom" id="joq-bX-ydF"/>
                             <constraint firstItem="cU4-Lf-z9x" firstAttribute="leading" secondItem="LIJ-wG-mSw" secondAttribute="leading" constant="20" id="lzM-NK-1d4"/>
                             <constraint firstItem="LIJ-wG-mSw" firstAttribute="trailing" secondItem="TuR-qK-8p2" secondAttribute="trailing" constant="20" id="pgl-k2-Uij"/>
+                            <constraint firstItem="VNb-cy-JED" firstAttribute="leading" secondItem="LIJ-wG-mSw" secondAttribute="leading" constant="20" id="pyz-9L-3bT"/>
                             <constraint firstItem="3z8-7L-Roc" firstAttribute="leading" secondItem="LIJ-wG-mSw" secondAttribute="leading" id="uDu-Xe-MOx"/>
                             <constraint firstItem="LIJ-wG-mSw" firstAttribute="bottom" secondItem="TuR-qK-8p2" secondAttribute="bottom" constant="20" id="y0v-A2-91N"/>
                             <constraint firstItem="TuR-qK-8p2" firstAttribute="leading" secondItem="LIJ-wG-mSw" secondAttribute="leading" constant="20" id="zaf-pd-jJQ"/>
@@ -193,6 +205,7 @@
                     </view>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Kfa-jV-HtW" userLabel="First Responder" sceneMemberID="firstResponder"/>
+                <exit id="vrz-CP-3lC" userLabel="Exit" sceneMemberID="exit"/>
             </objects>
             <point key="canvasLocation" x="804" y="118.29085457271366"/>
         </scene>
@@ -285,6 +298,7 @@
         </scene>
     </scenes>
     <resources>
+        <image name="backButton" width="29" height="24"/>
         <image name="beginnerBallerBG" width="414" height="736"/>
         <image name="desiredLeagueBG" width="414" height="736"/>
         <image name="swooshLogo" width="119" height="20"/>
